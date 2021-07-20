@@ -23,6 +23,7 @@ github.com/hashicorp/hcl/json/parser
 github.com/hashicorp/hcl/json/scanner
 github.com/hashicorp/hcl/json/token
 # github.com/hashicorp/vault/api v1.0.4
+## explicit
 github.com/hashicorp/vault/api
 # github.com/hashicorp/vault/sdk v0.1.13
 github.com/hashicorp/vault/sdk/helper/compressutil
@@ -34,6 +35,7 @@ github.com/hashicorp/vault/sdk/helper/strutil
 # github.com/mitchellh/go-homedir v1.1.0
 github.com/mitchellh/go-homedir
 # github.com/mitchellh/mapstructure v1.3.0
+## explicit
 github.com/mitchellh/mapstructure
 # github.com/pierrec/lz4 v2.0.5+incompatible
 github.com/pierrec/lz4
