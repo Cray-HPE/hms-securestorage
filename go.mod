@@ -26,3 +26,5 @@ require (
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1 // indirect
 )
+
+replace github.com/go-jose/go-jose/v3 v3.0.0 => github.com/go-jose/go-jose/v3 v3.0.3
