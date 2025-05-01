@@ -194,15 +194,25 @@ func GenerateMasterKey() (string, error) {
 
 // Saves secrets back to the JSON file
 func SaveSecrets(jsonFile string, store map[string]string) error {
-	file, err := os.OpenFile(jsonFile, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
+	f, err := os.OpenFile(jsonFile, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0o644)
 	if err != nil {
 		return err
 	}
-	defer file.Close()
+	// We’ll close at the end (after Sync).
+	defer func() {
+		_ = f.Close()
+	}()
 
-	encoder := json.NewEncoder(file)
-	encoder.SetIndent("", "  ")
-	return encoder.Encode(store)
+	enc := json.NewEncoder(f)
+	enc.SetIndent("", "  ")
+	if err := enc.Encode(store); err != nil {
+		return err
+	}
+	// Ensure data is on disk…
+	if err := f.Sync(); err != nil {
+		return err
+	}
+	return nil
 }
 
 // Loads the secrets JSON file
