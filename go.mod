@@ -1,10 +1,15 @@
 module github.com/Cray-HPE/hms-securestorage
 
-go 1.24.0
+go 1.24
 
 require (
 	github.com/hashicorp/vault/api v1.16.0
 	github.com/mitchellh/mapstructure v1.5.0
+)
+
+require (
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/spf13/pflag v1.0.6 // indirect
 )
 
 require (
@@ -21,6 +26,8 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
+	github.com/spf13/cobra v1.9.1
+	golang.org/x/crypto v0.37.0
 	golang.org/x/net v0.39.0 // indirect
 	golang.org/x/text v0.24.0 // indirect
 	golang.org/x/time v0.11.0 // indirect
