@@ -1,6 +1,6 @@
 module github.com/Cray-HPE/hms-securestorage
 
-go 1.24
+go 1.24.0
 
 require (
 	github.com/hashicorp/vault/api v1.16.0
@@ -14,7 +14,7 @@ require (
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
-	github.com/go-jose/go-jose/v4 v4.1.0 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
